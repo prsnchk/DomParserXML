@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<order_delivery id="1">
+    <cafe id="1">
+        <cafe_name>ComfortTown</cafe_name>
+    </cafe>
+    <courier id="1">
+        <first_name>Андрій</first_name>
+        <last_name>Колобок</last_name>
+    </courier>
+    <customer id="1">
+        <email>dja@gmail.com</email>
+        <first_name>Джавеліна</first_name>
+        <phone>+380937648576</phone>
+        <second_name>Прекрасна</second_name>
+    </customer>
+    <delivery_provider id="1">
+        <provider_name>Glovo</provider_name>
+    </delivery_provider>
+    <payment_type id="1">
+        <name>Готівкою</name>
+    </payment_type>
+    <price>1500.0</price>
+</order_delivery>

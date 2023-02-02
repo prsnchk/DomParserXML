@@ -12,7 +12,7 @@ import java.io.File;
 
 public class OrderParserService {
 
-    public void start(){
+    public void start() {
         try {
             OrderDelivery orderDeliveryFromXml = new OrderDelivery();
             Customer customerFromXml = new Customer();

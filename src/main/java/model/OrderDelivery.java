@@ -1,7 +1,11 @@
 package model;
 
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 import java.util.List;
 
+@XmlRootElement(name = "order_delivery")
 public class OrderDelivery {
     private int orderID;
     private double price;
@@ -11,10 +15,25 @@ public class OrderDelivery {
     private DeliveryProvider deliveryProvider;
     private PaymentType paymentType;
 
+    public OrderDelivery(int orderID, double price, Customer customer, Courier courier, Cafe cafe, DeliveryProvider deliveryProvider, PaymentType paymentType) {
+        this.orderID = orderID;
+        this.price = price;
+        this.customer = customer;
+        this.courier = courier;
+        this.cafe = cafe;
+        this.deliveryProvider = deliveryProvider;
+        this.paymentType = paymentType;
+    }
+
+    public OrderDelivery() {
+
+    }
+
     public int getOrderID() {
         return orderID;
     }
 
+    @XmlAttribute(name = "id")
     public void setOrderID(int orderID) {
         this.orderID = orderID;
     }
@@ -23,6 +42,7 @@ public class OrderDelivery {
         return price;
     }
 
+    @XmlElement(name = "price")
     public void setPrice(double price) {
         this.price = price;
     }
@@ -31,6 +51,7 @@ public class OrderDelivery {
         return customer;
     }
 
+    @XmlElement(name = "customer")
     public void setCustomer(Customer customer) {
         this.customer = customer;
     }
@@ -39,6 +60,7 @@ public class OrderDelivery {
         return courier;
     }
 
+    @XmlElement(name = "courier")
     public void setCourier(Courier courier) {
         this.courier = courier;
     }
@@ -47,6 +69,7 @@ public class OrderDelivery {
         return cafe;
     }
 
+    @XmlElement(name = "cafe")
     public void setCafe(Cafe cafe) {
         this.cafe = cafe;
     }
@@ -55,6 +78,7 @@ public class OrderDelivery {
         return deliveryProvider;
     }
 
+    @XmlElement(name = "delivery_provider")
     public void setDeliveryProvider(DeliveryProvider deliveryProvider) {
         this.deliveryProvider = deliveryProvider;
     }
@@ -63,6 +87,7 @@ public class OrderDelivery {
         return paymentType;
     }
 
+    @XmlElement(name = "payment_type")
     public void setPaymentType(PaymentType paymentType) {
         this.paymentType = paymentType;
     }
